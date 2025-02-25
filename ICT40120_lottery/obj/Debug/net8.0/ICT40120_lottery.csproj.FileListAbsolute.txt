@@ -1,0 +1,15 @@
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ICT40120_lottery.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ICT40120_lottery.AssemblyInfoInputs.cache
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ICT40120_lottery.AssemblyInfo.cs
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ICT40120_lottery.csproj.CoreCompileInputs.cache
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ICT40120_lottery.sourcelink.json
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ICT40120_lottery.dll
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ICT40120_lottery.pdb
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\bin\Debug\net8.0\ICT40120_lottery.exe
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\bin\Debug\net8.0\ICT40120_lottery.deps.json
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\bin\Debug\net8.0\ICT40120_lottery.runtimeconfig.json
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\bin\Debug\net8.0\ICT40120_lottery.dll
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\bin\Debug\net8.0\ICT40120_lottery.pdb
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\refint\ICT40120_lottery.dll
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ICT40120_lottery.genruntimeconfig.cache
+C:\Users\joelt\source\repos\ICT40120_lottery\ICT40120_lottery\obj\Debug\net8.0\ref\ICT40120_lottery.dll
