@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-int number_of_values = 2;
+﻿int number_of_values = 5;
 int[] user_guess = new int[number_of_values];
 int[] target_array = new int[number_of_values];
 int lowestValue = 0;
@@ -32,14 +30,3 @@ Console.WriteLine("target array");
 PrintArray(target_array);
 Console.WriteLine("user guess");
 PrintArray(user_guess); 
-
-//foreach (int i in user_guess)
-//{
-//    Console.WriteLine(i);
-//}
-
-//Console.WriteLine("random array");
-//foreach (int i in target_array)
-//{
-//    Console.WriteLine(i);
-//}    

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ICT40120_lottery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed09a4cac49c107127b0bdee8cfe44748936504d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+724c4080cbe957ccd769cf9e1c6625d14f55d684")]
 [assembly: System.Reflection.AssemblyProductAttribute("ICT40120_lottery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICT40120_lottery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
