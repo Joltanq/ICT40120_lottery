@@ -1,9 +1,17 @@
 ﻿int number_of_values = 2;
-int[] range_of_allowed_values = new int[number_of_values] ;
+int[] user_guess = new int[number_of_values];
 
-//range_of_allowed_values = {2,4};
-//string user_input = Console.ReadLine();
 
-Console.WriteLine("helol");
-Console.WriteLine(range_of_allowed_values[2]);
-//Console.WriteLine(user_input);
+for (int i =0; i < number_of_values; i++)
+{
+    Console.WriteLine("Gimme number");
+    user_guess[i] = int.Parse(Console.ReadLine());
+}
+
+//Console.WriteLine(user_guess);
+
+foreach (int i in user_guess)
+{
+    Console.WriteLine(i);
+}
+
