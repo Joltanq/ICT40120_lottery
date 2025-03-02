@@ -1,11 +1,13 @@
-﻿int number_of_values = 5;
+﻿using System.Runtime.InteropServices;
+
+int number_of_values = 5;
 int[] user_guess = new int[number_of_values];
 int[] target_array = new int[number_of_values];
+//still need to check if its within bounds fr low n high
 int lowestValue = 0;
 int highestValue = 10;
 
-//This loop accepts the user's input
-
+//This loop accepts the user's input 
 int number_of_value_iteration = 0;
 while (number_of_value_iteration < number_of_values)
 {
@@ -19,8 +21,6 @@ while (number_of_value_iteration < number_of_values)
     }
 }
 
-
-
 //this fills the target array with random numbers
 Random rnd = new Random();
 for (int i =0; i < number_of_values; i++)
@@ -32,13 +32,29 @@ for (int i =0; i < number_of_values; i++)
 //create print function
 void PrintArray(int[] array)
 {
+    Array.Sort(array);
     for (int i = 0; i < array.Length; i++)
         Console.WriteLine(array[i]);
 }
 
 
+// Linear Search to see if it is within bounds. this searches for one
+int LinearSearch(int[] array, int valuetoSearch)
+{
+    for (int i = 0; i < array.Length; i++)
+        if (array[i] == valuetoSearch)
+        {
+            return i;
+        }
+    return -1;
+}
+
+Console.WriteLine("Found at");
+Console.WriteLine(LinearSearch(user_guess, 4));
+Console.WriteLine("----");
 
 Console.WriteLine("target array");
+//Array.Sort(target_array);
 PrintArray(target_array);
 Console.WriteLine("user guess");
 PrintArray(user_guess); 
