@@ -5,11 +5,21 @@ int lowestValue = 0;
 int highestValue = 10;
 
 //This loop accepts the user's input
-for (int i =0; i < number_of_values; i++)
+
+int number_of_value_iteration = 0;
+while (number_of_value_iteration < number_of_values)
 {
-    Console.WriteLine("Gimme number");
-    user_guess[i] = int.Parse(Console.ReadLine());
+    Console.WriteLine("number");
+    if (int.TryParse(Console.ReadLine(), out user_guess[number_of_value_iteration]))
+    {
+        number_of_value_iteration++;
+    }else
+    {
+        Console.WriteLine("Try again");
+    }
 }
+
+
 
 //this fills the target array with random numbers
 Random rnd = new Random();
@@ -25,6 +35,8 @@ void PrintArray(int[] array)
     for (int i = 0; i < array.Length; i++)
         Console.WriteLine(array[i]);
 }
+
+
 
 Console.WriteLine("target array");
 PrintArray(target_array);
