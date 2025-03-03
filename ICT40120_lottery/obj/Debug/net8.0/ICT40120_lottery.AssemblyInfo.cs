@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ICT40120_lottery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05ad4764fd9de292ec628e363c059ac54d77fc5d")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06ebdda03590f358651e0566b8b5664be8537093")]
+>>>>>>> parent of 05ad476 (got half linear)
 [assembly: System.Reflection.AssemblyProductAttribute("ICT40120_lottery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICT40120_lottery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,25 +1,24 @@
-﻿using System.Runtime.InteropServices;
-
-int number_of_values = 5;
+﻿int number_of_values = 5;
 int[] user_guess = new int[number_of_values];
 int[] target_array = new int[number_of_values];
-//still need to check if its within bounds fr low n high
 int lowestValue = 0;
 int highestValue = 10;
 
 //This loop accepts the user's input 
-//int number_of_value_iteration = 0;
-//while (number_of_value_iteration < number_of_values)
-//{
-//    Console.WriteLine("number");
-//    if (int.TryParse(Console.ReadLine(), out user_guess[number_of_value_iteration]))
-//    {
-//        number_of_value_iteration++;
-//    }else
-//    {
-//        Console.WriteLine("Try again");
-//    }
-//}
+int number_of_value_iteration = 0;
+while (number_of_value_iteration < number_of_values)
+{
+    Console.WriteLine("number");
+    if (int.TryParse(Console.ReadLine(), out user_guess[number_of_value_iteration]))
+    {
+        number_of_value_iteration++;
+    }else
+    {
+        Console.WriteLine("Try again");
+    }
+}
+
+
 
 //this fills the target array with random numbers
 Random rnd = new Random();
@@ -32,30 +31,24 @@ for (int i =0; i < number_of_values; i++)
 //create print function
 void PrintArray(int[] array)
 {
-    Array.Sort(array);
     for (int i = 0; i < array.Length; i++)
         Console.WriteLine(array[i]);
 }
 
 
-// Linear Search searches throuhg the array
-int LinearSearch(int[] array, int[] arraytoSearch)
+// Linear Search to see if it is within bounds. this searches for one
+int LinearSearch(int[] array, int valuetoSearch)
 {
-    int[] tempArray = new int[number_of_values];
-    int k = 0;
     for (int i = 0; i < array.Length; i++)
-        for (int j =0; j < arraytoSearch.Length; j++)
-            if (array[i] == arraytoSearch[j])
-            {
-                tempArray[k] = arraytoSearch[j];
-                k++;
-            }
+        if (array[i] == valuetoSearch)
+        {
+            return i;
+        }
     return -1;
 }
 
 Console.WriteLine("Found at");
-//Console.WriteLine(LinearSearch(user_guess, [1,2,3,4,5]));
-Console.WriteLine(LinearSearch([2,2,8,7,4], [1,2,3,4,5]));
+Console.WriteLine(LinearSearch(user_guess, 4));
 Console.WriteLine("----");
 
 Console.WriteLine("target array");
