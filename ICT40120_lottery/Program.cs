@@ -14,8 +14,15 @@ while (number_of_value_iteration < number_of_values)
     {
         if (LinearSearch(user_guess, enteredValue) == -1)
         {
-            user_guess[number_of_value_iteration] = enteredValue;
-            number_of_value_iteration++;
+            if(enteredValue <= highestValue && enteredValue >= lowestValue)
+            {
+                user_guess[number_of_value_iteration] = enteredValue;
+                number_of_value_iteration++;
+            }
+            else
+            {
+                Console.WriteLine($"The number has to be between {lowestValue} and {highestValue}");
+            }
         }
         else
         {
