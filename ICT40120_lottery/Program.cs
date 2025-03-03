@@ -4,10 +4,8 @@ int[] target_array = new int[number_of_values];
 int lowestValue = 0;
 int highestValue = 10;
 
-
-Console.WriteLine(LinearSearch([1, 2, 3, 4, 5], 5));
-
 //This loop accepts the user's input 
+//TODO check if it is within bounds
 int number_of_value_iteration = 0;
 while (number_of_value_iteration < number_of_values)
 {
@@ -21,7 +19,7 @@ while (number_of_value_iteration < number_of_values)
         }
         else
         {
-            Console.WriteLine("Break");
+            Console.WriteLine("You gave me that number before. Give me a new one");
         }
     }else
     {
@@ -30,13 +28,15 @@ while (number_of_value_iteration < number_of_values)
 }
 
 
-
 //this fills the target array with random numbers
 Random rnd = new Random();
 for (int i =0; i < number_of_values; i++)
 {
     int randomNumber = rnd.Next(lowestValue, highestValue);
-    target_array[i] = randomNumber;
+    if (LinearSearch(target_array,randomNumber) == -1)
+    {
+        target_array[i] = randomNumber;
+    }    
 }
 
 //create print function
@@ -57,6 +57,9 @@ int LinearSearch(int[] array, int valuetoSearch)
         }
     return -1;
 }
+
+
+// BinarySearch to check the array for win conditions
 
 Console.WriteLine("Found at");
 Console.WriteLine(LinearSearch(user_guess, 4));
