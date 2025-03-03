@@ -5,7 +5,6 @@ int lowestValue = 0;
 int highestValue = 10;
 
 //This loop accepts the user's input 
-//TODO check if it is within bounds
 int number_of_value_iteration = 0;
 while (number_of_value_iteration < number_of_values)
 {
