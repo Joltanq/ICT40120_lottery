@@ -67,8 +67,25 @@ int LinearSearch(int[] array, int valuetoSearch)
 
 // BinarySearch to check the array for win conditions
 
+Array.Sort(user_guess);
+Array.Sort(target_array);
+int BinarySearch(int[] array, int valuetoSearch,int low, int high)
+{
+    if (high >= low)
+    {
+        int mid = (high + low) / 2;
+        if (array[mid] == valuetoSearch) return mid;
+        if (array[mid] > valuetoSearch) return BinarySearch(array, valuetoSearch, low, mid - 1);
+
+        return BinarySearch(array, valuetoSearch, mid +1, high );
+    }
+    return -1;
+}
+
+
 Console.WriteLine("Found at");
-Console.WriteLine(LinearSearch(user_guess, 4));
+//Console.WriteLine(LinearSearch(user_guess, 4))
+Console.WriteLine(BinarySearch(user_guess,8, 0, 5));
 Console.WriteLine("----");
 
 Console.WriteLine("target array");
