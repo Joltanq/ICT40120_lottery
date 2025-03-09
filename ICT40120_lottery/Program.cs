@@ -85,10 +85,11 @@ int BinarySearch(int[] array, int valuetoSearch,int low, int high)
 
 Console.WriteLine("Found at");
 //Console.WriteLine(LinearSearch(user_guess, 4));
+
+// store these elements in an array and count those greater than >= 0. this = number of correct guesses
 for (int i = 0; i < number_of_values; i++)
     //BinarySearch(target_array, user_guess[i], 0 , number_of_values);
     Console.WriteLine(BinarySearch([3,5,6,8,9], user_guess[i], 0 , number_of_values));
-//Console.WriteLine(BinarySearch(user_guess,8, 0, 5));
 Console.WriteLine("----");
 
 Console.WriteLine("target array");
