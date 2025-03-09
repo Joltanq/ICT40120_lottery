@@ -1,7 +1,7 @@
 ﻿int number_of_values = 5;
 int[] user_guess = new int[number_of_values];
 int[] target_array = new int[number_of_values];
-int lowestValue = 0;
+int lowestValue = 1;
 int highestValue = 10;
 
 //This loop accepts the user's input 
@@ -13,7 +13,7 @@ while (number_of_value_iteration < number_of_values)
     {
         if (LinearSearch(user_guess, enteredValue) == -1)
         {
-            if(enteredValue <= highestValue && enteredValue >= lowestValue)
+            if(enteredValue <= highestValue || enteredValue >= lowestValue)
             {
                 user_guess[number_of_value_iteration] = enteredValue;
                 number_of_value_iteration++;
@@ -77,15 +77,18 @@ int BinarySearch(int[] array, int valuetoSearch,int low, int high)
         if (array[mid] == valuetoSearch) return mid;
         if (array[mid] > valuetoSearch) return BinarySearch(array, valuetoSearch, low, mid - 1);
 
-        return BinarySearch(array, valuetoSearch, mid +1, high );
+            return BinarySearch(array, valuetoSearch, mid +1, high );
     }
     return -1;
 }
 
 
 Console.WriteLine("Found at");
-//Console.WriteLine(LinearSearch(user_guess, 4))
-Console.WriteLine(BinarySearch(user_guess,8, 0, 5));
+//Console.WriteLine(LinearSearch(user_guess, 4));
+for (int i = 0; i < number_of_values; i++)
+    //BinarySearch(target_array, user_guess[i], 0 , number_of_values);
+    Console.WriteLine(BinarySearch([3,5,6,8,9], user_guess[i], 0 , number_of_values));
+//Console.WriteLine(BinarySearch(user_guess,8, 0, 5));
 Console.WriteLine("----");
 
 Console.WriteLine("target array");
