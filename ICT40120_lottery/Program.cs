@@ -47,8 +47,9 @@ for (int i =0; i < number_of_values; i++)
 }
 
 //create print function
-void PrintArray(int[] array)
+void PrintArray(int[] array, string array_type)
 {
+    Console.WriteLine($"The numbers in {array_type} were:");
     for (int i = 0; i < array.Length; i++)
         Console.WriteLine(array[i]);
 }   
@@ -94,22 +95,16 @@ int CountCorrectGuesses(int [] array)
     return correct_guess;
 }
 
-
-//Console.WriteLine(LinearSearch(user_guess, 4));
-
 // Creates new array to store index of correct guess
 for (int i = 0; i < number_of_values; i++)
-    //BinarySearch(target_array, user_guess[i], 0 , number_of_values);
-    correct_guesses_array[i] = BinarySearch([3,5,6,8,9], user_guess_array[i], 0 , number_of_values);
-
-Console.WriteLine("number of gueses");
-Console.WriteLine(CountCorrectGuesses(correct_guesses_array)); 
+    // this is a test scenario
+    //correct_guesses_array[i] = BinarySearch([3,5,6,8,9], user_guess_array[i], 0 , number_of_values);
+correct_guesses_array[i] = BinarySearch(target_array, user_guess_array[i], 0 , number_of_values);
 
 
-Console.WriteLine("----");
 
-Console.WriteLine("target array");
-PrintArray(target_array);
-Console.WriteLine("user guess");
-PrintArray(user_guess_array);
+Console.WriteLine($"You have gotten {CountCorrectGuesses(correct_guesses_array)} guesses correct");
+
+PrintArray(target_array,"lottery numbers");
+PrintArray(user_guess_array, "your guesses");
 
