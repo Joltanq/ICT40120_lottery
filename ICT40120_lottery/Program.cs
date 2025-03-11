@@ -5,45 +5,58 @@ int[] user_guess_array = new int[number_of_values];
 int[] target_array = new int[number_of_values];
 int[] correct_guesses_array = new int[number_of_values];
 
-//This loop accepts the user's input 
-int number_of_value_iteration = 0;
-while (number_of_value_iteration < number_of_values)
+//This function accepts the user's input 
+int[] collectInputs()
 {
-    Console.WriteLine("number");
-    if (int.TryParse(Console.ReadLine(), out int enteredValue) )
+    int[] user_inputs = new int[number_of_values];
+    int number_of_value_iteration = 0;
+    while (number_of_value_iteration < number_of_values)
     {
-        if (LinearSearch(user_guess_array, enteredValue, number_of_value_iteration) == -1)
+        Console.WriteLine("number");
+        if (int.TryParse(Console.ReadLine(), out int enteredValue))
         {
-            if(enteredValue <= highestValue && enteredValue >= lowestValue)
+            if (LinearSearch(user_inputs, enteredValue, number_of_value_iteration) == -1)
             {
-                user_guess_array[number_of_value_iteration] = enteredValue;
-                number_of_value_iteration++;
+                if (enteredValue <= highestValue && enteredValue >= lowestValue)
+                {
+                    user_inputs[number_of_value_iteration] = enteredValue;
+                    number_of_value_iteration++;
+                }
+                else
+                {
+                    Console.WriteLine($"The number has to be between {lowestValue} and {highestValue}");
+                }
             }
             else
             {
-                Console.WriteLine($"The number has to be between {lowestValue} and {highestValue}");
+                Console.WriteLine("You gave me that number before. Give me a new one");
             }
         }
         else
         {
-            Console.WriteLine("You gave me that number before. Give me a new one");
+            Console.WriteLine("Try again");
         }
-    }else
-    {
-        Console.WriteLine("Try again");
     }
+    return user_inputs;
 }
 
 
-//this fills the target array with random numbers
-Random rnd = new Random();
-for (int i =0; i < number_of_values; i++)
+int[] GenerateRandom()
 {
-    int randomNumber = rnd.Next(lowestValue, highestValue);
-    if (LinearSearch(target_array,randomNumber,i) == -1)
-    {
-        target_array[i] = randomNumber;
-    }    
+    Random rnd = new Random();
+    int i = 0; 
+    int[] randomArray = new int[number_of_values]; 
+    while (i < number_of_values)
+        {
+            int randomNumber = rnd.Next(lowestValue, highestValue);
+            if (LinearSearch(randomArray, randomNumber, i) == -1)
+            {
+            randomArray[i] = randomNumber;
+                i++;
+            }
+        }
+    return randomArray;
+
 }
 
 //create print function
@@ -69,10 +82,9 @@ int LinearSearch(int[] array, int valuetoSearch, int validLength)
 
 // BinarySearch to check the array for win conditions
 
-Array.Sort(user_guess_array);
-Array.Sort(target_array);
 int BinarySearch(int[] array, int valuetoSearch,int low, int high)
 {
+    Array.Sort(array);   
     if (high >= low)
     {
         int mid = (high + low) / 2;
@@ -95,12 +107,16 @@ int CountCorrectGuesses(int [] array)
     return correct_guess;
 }
 
+// main
+
+
+target_array = GenerateRandom();
+user_guess_array = collectInputs();
 // Creates new array to store index of correct guess
 for (int i = 0; i < number_of_values; i++)
     // this is a test scenario
     //correct_guesses_array[i] = BinarySearch([3,5,6,8,9], user_guess_array[i], 0 , number_of_values);
 correct_guesses_array[i] = BinarySearch(target_array, user_guess_array[i], 0 , number_of_values);
-
 
 
 Console.WriteLine($"You have gotten {CountCorrectGuesses(correct_guesses_array)} guesses correct");
