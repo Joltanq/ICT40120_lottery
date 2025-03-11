@@ -1,9 +1,9 @@
 ﻿int number_of_values = 5;
+int lowestValue = 0;
+int highestValue = 10;
 int[] user_guess_array = new int[number_of_values];
 int[] target_array = new int[number_of_values];
 int[] correct_guesses_array = new int[number_of_values];
-int lowestValue = 0;
-int highestValue = 10;
 
 //This loop accepts the user's input 
 int number_of_value_iteration = 0;
